@@ -1,0 +1,305 @@
+body,
+html {
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* .hero {
+  position: relative;
+  margin: 0px;
+  min-height: 300px;
+  padding: 30px;
+ background-color: black;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+} */
+
+/* .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+} */
+
+.hero {
+  position: relative;
+  margin: 0px;
+  min-height: 100vh; /* Use min-height instead of a fixed height */
+  padding: 35px;
+  background-color: rgba(0, 0, 0, 0.813);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  margin-top: -50px;
+}
+
+/* Remove unnecessary margin */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically on small screens */
+  justify-content: center; /* Ensure content is centered */
+}
+
+.counter {
+  text-align: center;
+  margin-bottom: 20px; /* Add some space between counter and points */
+}
+
+.points {
+  flex: 2;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Adjust layout for mobile view */
+@media (max-width: 480px) {
+  .heading1 {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+
+  h4 {
+    font-size: .3rem;
+  }
+
+  .paragraph {
+    font-size: 1.5rem;
+  }
+
+  .button2 {
+    width: 90%;
+    margin-bottom: 20px; 
+  }
+
+  .button2 a {
+    font-size: 20px;
+    padding: 35px 40px;
+  }
+
+  .button1 a {
+    font-size: 20px;
+    padding: 5px 0;
+  }
+
+  .counter {
+    font-size: 1.4rem;
+  }
+
+  .points li {
+    margin-bottom: 20px;
+  }
+
+  .conent {
+    margin-top: 10px;
+  }
+
+  .h4 {
+    margin-bottom: -50px;
+  }
+
+  /* Ensure no vertical overflow in mobile view */
+  body, html {
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
+
+
+.heading1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.40rem;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.paragraph,
+.counter {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+
+#countdown,  #countdown2{
+  font-family: 'Oswald', sans-serif;
+  color: #FFD700;
+}
+
+#countdown{
+ font-size: 3rem;
+}
+
+#countdown2{
+ font-size: 1.5rem;
+
+}
+
+.points {
+  color: #fff;
+  margin: 0;
+}
+
+.points .fa-check-circle {
+  color: #FFD700;
+}
+
+.points ul {
+  list-style-type: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.points ul li {
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button2 {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.button1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -80px;
+}
+
+.button1 a, .button2 a {
+  font-family: 'Oswald', sans-serif;
+  padding: 10px 20px;
+  background: #FFD700;
+  color: #000;
+  font-size: 22px;
+  line-height: 32px;
+  border: none;
+  cursor: pointer;
+  animation: buttonAnimation 2s infinite;
+  text-decoration: none;
+}
+
+.button2 a {
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.button1 a {
+  padding: 15px 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.button1 a:hover,
+.button2 a:hover {
+  animation-play-state: paused;
+}
+
+.button1 {
+  margin-top: 0px;
+  margin-bottom: 80px;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*Mobile Responsive*/
+@media (max-width: 480px) {
+  .heading1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 1.5rem;
+  }
+
+  .button2{
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .button2 a {
+    font-size: 20px;
+    padding: 5px 40px;
+
+  }
+
+  .button1 a {
+    font-size: 10px;
+    padding: 5px 0;
+  }
+
+  .counter {
+    font-size: 1.4rem;
+  }
+
+  .points li{
+    margin-bottom: 10px;
+  }
+
+  .conent{
+    margin-top: 10px;
+  }
+  .h4{
+    margin-bottom: 20px;
+  }
+}
+
+/* New styles for arranging elements */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  flex: 1;
+  text-align: center;
+}
+
+.points {
+  flex: 2;
+}
